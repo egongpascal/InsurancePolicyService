@@ -84,7 +84,7 @@ namespace InsurancePolicyService.Controllers
             return Ok(result);
         }
 
-        [Authorize(AuthenticationSchemes = "Bearer")]
+    //    [Authorize(AuthenticationSchemes = "Bearer")]
         [HttpGet("GetPurchaseHistory")]
         public async Task<ActionResult<ResponseData<List<PurchaseHistory>>>> GetPurchaseHistory(string userId)
         {
