@@ -13,8 +13,9 @@ using static InsurancePolicyService.Application.Services.JwtService;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-var con = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(con));
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(connectionString));
+
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

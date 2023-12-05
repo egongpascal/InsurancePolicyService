@@ -18,4 +18,10 @@ namespace InsurancePolicyService.Domain.Entities
         public decimal Premium { get; set; }
         public PaymentStatus PaymentStatus { get; set; }
     }
+    public enum PaymentStatus
+    {
+        Pending,
+        Paid,
+        Cancelled
+    }
 }
