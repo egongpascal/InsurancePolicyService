@@ -101,6 +101,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "InsurancePolicyService v1"));
 }
+else
+{
+    app.UseSwagger();
+    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "InsurancePolicyService v1"));
+}
 
 app.UseHttpsRedirection();
 
