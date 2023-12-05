@@ -39,11 +39,6 @@ namespace InsurancePolicyService.Domain.Entities
     }
 
 
-    public enum PaymentStatus
-    {
-        Pending,
-        Paid,
-        Cancelled
-    }
+   
 }
 
